@@ -14,19 +14,19 @@ namespace Contract_Monthly_Claim_System_ST10077892.Controllers
             return View();
         }
 
-        //public IActionResult Edit()
-        //{
-        //    return View();
-        //}
+        public IActionResult Edit()
+        {
+            return View();
+        }
 
-        //public IActionResult Details()
-        //{
-        //    return View();
-        //}
+        public IActionResult Details()
+        {
+            return View();
+        }
 
-        //public IActionResult Delete()
-        //{
-        //    return View();
-        //}
+        public IActionResult Delete()
+        {
+            return View();
+        }
     }
 }

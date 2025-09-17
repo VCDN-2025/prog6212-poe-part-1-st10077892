@@ -1,0 +1,84 @@
+﻿@model IEnumerable<Contract_Monthly_Claim_System_ST10077892.Models.User>
+
+@{
+    ViewData["Title"] = "Users";
+}
+
+<div class="container mt-5">
+    <h1 class="mb-4 text-center text-primary">Users</h1>
+
+    <p class="text-center">
+        <a class="btn btn-success btn-lg" asp-action="Create">Create New User</a>
+    </p>
+
+    <table class="table table-striped table-bordered table-hover shadow-sm">
+        <thead class="table-dark text-center">
+            <tr>
+                <th>User ID</th>
+                <th>Full Name</th>
+                <th>Department</th>
+                <th>Role ID</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody class="text-center">
+            <tr>
+                <td>401</td>
+                <td>Amanda Nkosi</td>
+                <td>IT</td>
+                <td>U01</td>
+                <td>
+                    <a class="btn btn-sm btn-warning" asp-action="Edit" asp-route-id="401">Edit</a>
+                    <a class="btn btn-sm btn-info" asp-action="Details" asp-route-id="401">Details</a>
+                    <a class="btn btn-sm btn-danger" asp-action="Delete" asp-route-id="401">Delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td>402</td>
+                <td>Lwazi Mthethwa</td>
+                <td>HR</td>
+                <td>U02</td>
+                <td>
+                    <a class="btn btn-sm btn-warning" asp-action="Edit" asp-route-id="402">Edit</a>
+                    <a class="btn btn-sm btn-info" asp-action="Details" asp-route-id="402">Details</a>
+                    <a class="btn btn-sm btn-danger" asp-action="Delete" asp-route-id="402">Delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td>403</td>
+                <td>Siphelele Dlamini</td>
+                <td>Finance</td>
+                <td>U03</td>
+                <td>
+                    <a class="btn btn-sm btn-warning" asp-action="Edit" asp-route-id="403">Edit</a>
+                    <a class="btn btn-sm btn-info" asp-action="Details" asp-route-id="403">Details</a>
+                    <a class="btn btn-sm btn-danger" asp-action="Delete" asp-route-id="403">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<style>
+    h1 {
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+
+    .table th, .table td {
+        vertical-align: middle;
+    }
+
+    .btn {
+        margin-right: 5px;
+    }
+
+    .table-hover tbody tr:hover {
+        background-color: #f1f8ff;
+        transition: 0.2s;
+    }
+
+    .shadow-sm {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+</style>

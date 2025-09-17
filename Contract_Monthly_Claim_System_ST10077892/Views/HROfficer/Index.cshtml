@@ -1,0 +1,84 @@
+﻿@model IEnumerable<Contract_Monthly_Claim_System_ST10077892.Models.HROfficer>
+
+@{
+    ViewData["Title"] = "HR Officers";
+}
+
+<div class="container mt-5">
+    <h1 class="mb-4 text-center text-primary">HR Officers</h1>
+
+    <p class="text-center">
+        <a class="btn btn-success btn-lg" asp-action="Create">Create New HR Officer</a>
+    </p>
+
+    <table class="table table-striped table-bordered table-hover shadow-sm">
+        <thead class="table-dark text-center">
+            <tr>
+                <th>User ID</th>
+                <th>Full Name</th>
+                <th>Department</th>
+                <th>Role ID</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody class="text-center">
+            <tr>
+                <td>201</td>
+                <td>Nomsa Khumalo</td>
+                <td>Human Resources</td>
+                <td>HR01</td>
+                <td>
+                    <a class="btn btn-sm btn-warning" asp-action="Edit" asp-route-id="201">Edit</a>
+                    <a class="btn btn-sm btn-info" asp-action="Details" asp-route-id="201">Details</a>
+                    <a class="btn btn-sm btn-danger" asp-action="Delete" asp-route-id="201">Delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td>202</td>
+                <td>Bongani Ndlovu</td>
+                <td>Recruitment</td>
+                <td>HR02</td>
+                <td>
+                    <a class="btn btn-sm btn-warning" asp-action="Edit" asp-route-id="202">Edit</a>
+                    <a class="btn btn-sm btn-info" asp-action="Details" asp-route-id="202">Details</a>
+                    <a class="btn btn-sm btn-danger" asp-action="Delete" asp-route-id="202">Delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td>203</td>
+                <td>Thuli Mthembu</td>
+                <td>Employee Relations</td>
+                <td>HR03</td>
+                <td>
+                    <a class="btn btn-sm btn-warning" asp-action="Edit" asp-route-id="203">Edit</a>
+                    <a class="btn btn-sm btn-info" asp-action="Details" asp-route-id="203">Details</a>
+                    <a class="btn btn-sm btn-danger" asp-action="Delete" asp-route-id="203">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<style>
+    h1 {
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+
+    .table th, .table td {
+        vertical-align: middle;
+    }
+
+    .btn {
+        margin-right: 5px;
+    }
+
+    .table-hover tbody tr:hover {
+        background-color: #f1f8ff;
+        transition: 0.2s;
+    }
+
+    .shadow-sm {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+</style>

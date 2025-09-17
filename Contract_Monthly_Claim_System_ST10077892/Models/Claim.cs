@@ -12,6 +12,7 @@
         // Navigation
         public Lecturer? Lecturer { get; set; }
         public ICollection<SupportingDocument> Documents { get; set; }
+        public DateTime ApprovedDate { get; set; }
     }
 
 }

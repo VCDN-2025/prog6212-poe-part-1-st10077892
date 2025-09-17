@@ -1,0 +1,63 @@
+﻿@model Contract_Monthly_Claim_System_ST10077892.Models.UserRole
+
+@{
+    ViewData["Title"] = "Create User Role";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-lg rounded-4 animate__animated animate__fadeInUp">
+        <div class="card-body p-5">
+            <h1 class="mb-4 text-center text-primary fw-bold animate__animated animate__fadeInDown">Create New User Role 🔐</h1>
+            <h4 class="mb-3 text-center text-secondary">Define a role and its permissions</h4>
+            <hr />
+
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form asp-action="Create" class="needs-validation" novalidate>
+                        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                        <div class="mb-3">
+                            <label asp-for="RoleID" class="form-label fw-semibold"></label>
+                            <input asp-for="RoleID" class="form-control shadow-sm" placeholder="Enter Role ID" />
+                            <span asp-validation-for="RoleID" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-4">
+                            <label asp-for="RoleName" class="form-label fw-semibold"></label>
+                            <input asp-for="RoleName" class="form-control shadow-sm" placeholder="Enter Role Name" />
+                            <span asp-validation-for="RoleName" class="text-danger"></span>
+                        </div>
+
+                        <div class="d-grid">
+                            <input type="submit" value="Create Role" class="btn btn-primary btn-lg fw-bold shadow-sm" />
+                        </div>
+                    </form>
+
+                    <div class="mt-4 text-center">
+                        <a asp-action="Index" class="link-secondary text-decoration-underline">← Back to Roles List</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Animate.css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+<style>
+    .form-control {
+        transition: all 0.3s;
+    }
+
+        .form-control:focus {
+            border-color: #0d6efd;
+            box-shadow: 0 0 8px rgba(13, 110, 253, 0.25);
+        }
+</style>

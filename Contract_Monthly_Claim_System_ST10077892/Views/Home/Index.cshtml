@@ -2,7 +2,86 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<!-- Animate.css for subtle animations -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+<div class="container mt-5">
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold mb-3 animate__animated animate__fadeInDown" style="color: #2c3e50;">
+            Welcome to the Monthly Claim Management System
+        </h1>
+        <p class="lead animate__animated animate__fadeInUp" style="color: #34495e;">
+            Efficiently manage lecturer claims, supporting documents, and approvals — all in one place.
+        </p>
+        <hr class="my-4 border-3 border-primary w-25 mx-auto" />
+        <p class="animate__animated animate__fadeInUp animate__delay-1s">
+            Learn more about
+            <a href="https://learn.microsoft.com/aspnet/core" target="_blank" class="link-primary fw-bold">
+                building Web apps with ASP.NET Core
+            </a>.
+        </p>
+    </div>
+
+    <div class="row g-4">
+        <!-- Lecturers Card -->
+        <div class="col-md-3">
+            <div class="card shadow-lg border-0 text-center h-100 hover-card bg-gradient-to-top">
+                <div class="card-body animate__animated animate__zoomIn">
+                    <h5 class="card-title">👩‍🏫 Lecturers</h5>
+                    <p class="card-text">View and manage lecturer profiles and their claim submissions.</p>
+                    <a asp-controller="Lecturers" asp-action="Index" class="btn btn-primary btn-sm fw-bold">Go to Lecturers</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Claims Card -->
+        <div class="col-md-3">
+            <div class="card shadow-lg border-0 text-center h-100 hover-card bg-gradient-to-top">
+                <div class="card-body animate__animated animate__zoomIn animate__delay-1s">
+                    <h5 class="card-title">📝 Claims</h5>
+                    <p class="card-text">Submit, review, and approve claims for hours worked.</p>
+                    <a asp-controller="Claims" asp-action="Index" class="btn btn-success btn-sm fw-bold">Go to Claims</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Documents Card -->
+        <div class="col-md-3">
+            <div class="card shadow-lg border-0 text-center h-100 hover-card bg-gradient-to-top">
+                <div class="card-body animate__animated animate__zoomIn animate__delay-2s">
+                    <h5 class="card-title">📂 Documents</h5>
+                    <p class="card-text">Upload and track supporting documents for claims.</p>
+                    <a asp-controller="SupportingDocuments" asp-action="Index" class="btn btn-info btn-sm text-white fw-bold">Go to Documents</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Roles Card -->
+        <div class="col-md-3">
+            <div class="card shadow-lg border-0 text-center h-100 hover-card bg-gradient-to-top">
+                <div class="card-body animate__animated animate__zoomIn animate__delay-3s">
+                    <h5 class="card-title">🔐 Roles</h5>
+                    <p class="card-text">Manage system roles such as Administrator, Lecturer, and Finance Officer.</p>
+                    <a asp-controller="UserRoles" asp-action="Index" class="btn btn-warning btn-sm fw-bold">Go to Roles</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+<style>
+    .hover-card {
+        transition: transform 0.3s, box-shadow 0.3s;
+        border-radius: 1rem;
+        background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    }
+
+        .hover-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+    .bg-gradient-to-top {
+        background: linear-gradient(180deg, #ffffff 0%, #e0f7fa 100%);
+    }
+</style>

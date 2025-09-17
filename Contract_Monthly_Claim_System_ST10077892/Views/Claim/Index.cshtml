@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "Claims Index";
+}
+
+<h1 class="mb-4">Claims</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">➕ Create New</a>
+</p>
+
+<table class="table table-bordered table-striped table-hover shadow-sm">
+    <thead class="table-dark">
+        <tr>
+            <th>Claim ID</th>
+            <th>Lecturer ID</th>
+            <th>Hours Worked</th>
+            <th>Hourly Rate</th>
+            <th>Submission Date</th>
+            <th>Status</th>
+            <th class="text-center">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>2001</td>
+            <td>1001</td>
+            <td>10</td>
+            <td>R250</td>
+            <td>2025-09-01</td>
+            <td><span class="badge bg-warning text-dark">Pending</span></td>
+            <td class="text-center">
+                <a asp-action="Edit" asp-route-id="2001" class="btn btn-sm btn-warning">✏️ Edit</a>
+                <a asp-action="Details" asp-route-id="2001" class="btn btn-sm btn-info text-white">ℹ️ Details</a>
+                <a asp-action="Delete" asp-route-id="2001" class="btn btn-sm btn-danger">🗑️ Delete</a>
+            </td>
+        </tr>
+        <tr>
+            <td>2002</td>
+            <td>1002</td>
+            <td>15</td>
+            <td>R300</td>
+            <td>2025-09-05</td>
+            <td><span class="badge bg-success">Approved</span></td>
+            <td class="text-center">
+                <a asp-action="Edit" asp-route-id="2002" class="btn btn-sm btn-warning">✏️ Edit</a>
+                <a asp-action="Details" asp-route-id="2002" class="btn btn-sm btn-info text-white">ℹ️ Details</a>
+                <a asp-action="Delete" asp-route-id="2002" class="btn btn-sm btn-danger">🗑️ Delete</a>
+            </td>
+        </tr>
+        <tr>
+            <td>2003</td>
+            <td>1003</td>
+            <td>8</td>
+            <td>R280</td>
+            <td>2025-09-10</td>
+            <td><span class="badge bg-danger">Rejected</span></td>
+            <td class="text-center">
+                <a asp-action="Edit" asp-route-id="2003" class="btn btn-sm btn-warning">✏️ Edit</a>
+                <a asp-action="Details" asp-route-id="2003" class="btn btn-sm btn-info text-white">ℹ️ Details</a>
+                <a asp-action="Delete" asp-route-id="2003" class="btn btn-sm btn-danger">🗑️ Delete</a>
+            </td>
+        </tr>
+    </tbody>
+</table>

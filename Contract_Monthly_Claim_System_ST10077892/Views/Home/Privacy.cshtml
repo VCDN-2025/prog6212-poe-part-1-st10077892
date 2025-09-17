@@ -1,6 +1,75 @@
 ﻿@{
     ViewData["Title"] = "Privacy Policy";
 }
-<h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<!-- Animate.css for subtle animations -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+<div class="container mt-5">
+    <div class="card shadow-lg border-0 animate__animated animate__fadeInUp">
+        <div class="card-body p-5 bg-gradient-to-right rounded-4">
+            <h1 class="mb-4 text-primary text-center animate__animated animate__fadeInDown">
+                @ViewData["Title"] 🔒
+            </h1>
+
+            <p class="lead text-center mb-4 animate__animated animate__fadeIn animate__delay-1s">
+                We value your trust. This Privacy Policy explains how we collect, use, and protect your information while using the Monthly Claim Management System.
+            </p>
+
+            <hr class="border-3 border-primary" />
+
+            <div class="mt-4">
+                <h4 class="text-info mb-3">📌 Information We Collect</h4>
+                <ul class="list-group list-group-flush mb-4">
+                    <li class="list-group-item"><i class="bi bi-person-fill text-primary me-2"></i> Personal details such as name, email, and department.</li>
+                    <li class="list-group-item"><i class="bi bi-clock-fill text-primary me-2"></i> Claim submission details including hours worked, hourly rate, and status.</li>
+                    <li class="list-group-item"><i class="bi bi-file-earmark-text-fill text-primary me-2"></i> Supporting documents uploaded for verification.</li>
+                    <li class="list-group-item"><i class="bi bi-shield-lock-fill text-primary me-2"></i> User role assignments for access control.</li>
+                </ul>
+
+                <h4 class="text-info mb-3">📌 How We Use Your Information</h4>
+                <ul class="list-group list-group-flush mb-4">
+                    <li class="list-group-item">Process and manage lecturer claims.</li>
+                    <li class="list-group-item">Verify claims using supporting documents.</li>
+                    <li class="list-group-item">Ensure secure access based on user roles.</li>
+                    <li class="list-group-item">Improve system functionality and compliance.</li>
+                </ul>
+
+                <h4 class="text-info mb-3">📌 Data Protection & Security</h4>
+                <p class="mb-4">Strict security measures protect your data against unauthorized access, alteration, or disclosure. Access is role-based to ensure privacy and security.</p>
+
+                <h4 class="text-info mb-3">📌 Your Rights</h4>
+                <ul class="list-group list-group-flush mb-4">
+                    <li class="list-group-item">Request access to your personal information.</li>
+                    <li class="list-group-item">Request corrections to inaccurate or outdated info.</li>
+                    <li class="list-group-item">Contact system administrators for privacy concerns.</li>
+                </ul>
+
+                <h4 class="text-info mb-3">📌 Contact Us</h4>
+                <p class="mb-0">
+                    Questions about this Privacy Policy? Contact the system administrator at
+                    <a href="mailto:support@university.ac.za" class="fw-bold text-decoration-underline">support@university.ac.za</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .bg-gradient-to-right {
+        background: linear-gradient(135deg, #e0f7fa, #c3e6ff);
+    }
+
+    .list-group-item {
+        border: none;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+        .list-group-item i {
+            font-size: 1.2rem;
+        }
+</style>
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">

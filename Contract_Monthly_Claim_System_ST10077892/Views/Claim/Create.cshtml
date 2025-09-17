@@ -1,0 +1,92 @@
+﻿@model Contract_Monthly_Claim_System_ST10077892.Models.Claim
+
+@{
+    ViewData["Title"] = "Create Claim";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-lg rounded-4 animate__animated animate__fadeInUp">
+        <div class="card-body p-5">
+            <h1 class="mb-4 text-center text-primary fw-bold animate__animated animate__fadeInDown">Create New Claim 📝</h1>
+            <h4 class="mb-3 text-center text-secondary">Fill in the details below</h4>
+            <hr />
+
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form asp-action="Create" class="needs-validation" novalidate>
+                        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                        <div class="mb-3">
+                            <label asp-for="ClaimID" class="form-label fw-semibold"></label>
+                            <input asp-for="ClaimID" class="form-control shadow-sm" placeholder="Enter Claim ID" />
+                            <span asp-validation-for="ClaimID" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="LecturerID" class="form-label fw-semibold"></label>
+                            <input asp-for="LecturerID" class="form-control shadow-sm" placeholder="Enter Lecturer ID" />
+                            <span asp-validation-for="LecturerID" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="HoursWorked" class="form-label fw-semibold"></label>
+                            <input asp-for="HoursWorked" class="form-control shadow-sm" placeholder="Enter hours worked" />
+                            <span asp-validation-for="HoursWorked" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="HourlyRate" class="form-label fw-semibold"></label>
+                            <input asp-for="HourlyRate" class="form-control shadow-sm" placeholder="Enter hourly rate" />
+                            <span asp-validation-for="HourlyRate" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="SubmissionDate" class="form-label fw-semibold"></label>
+                            <input asp-for="SubmissionDate" type="date" class="form-control shadow-sm" />
+                            <span asp-validation-for="SubmissionDate" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-4">
+                            <label asp-for="Status" class="form-label fw-semibold"></label>
+                            <select asp-for="Status" class="form-select shadow-sm">
+                                <option value="">-- Select Status --</option>
+                                <option value="Pending">Pending</option>
+                                <option value="Approved">Approved</option>
+                                <option value="Rejected">Rejected</option>
+                            </select>
+                            <span asp-validation-for="Status" class="text-danger"></span>
+                        </div>
+
+                        <div class="d-grid">
+                            <input type="submit" value="Create Claim" class="btn btn-primary btn-lg fw-bold shadow-sm" />
+                        </div>
+                    </form>
+
+                    <div class="mt-4 text-center">
+                        <a asp-action="Index" class="link-secondary text-decoration-underline">← Back to Claims List</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Animate.css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+<style>
+    .form-control, .form-select {
+        transition: all 0.3s;
+    }
+
+        .form-control:focus, .form-select:focus {
+            border-color: #0d6efd;
+            box-shadow: 0 0 8px rgba(13, 110, 253, 0.25);
+        }
+</style>

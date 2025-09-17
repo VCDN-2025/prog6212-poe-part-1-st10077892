@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Contract_Monthly_Claim_System_ST10077892.Models;
 
 namespace Contract_Monthly_Claim_System_ST10077892.Controllers
 {
@@ -6,7 +7,8 @@ namespace Contract_Monthly_Claim_System_ST10077892.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            var supportingDocument = new List<SupportingDocument>();
+            return View(supportingDocument);
         }
 
         public IActionResult Create()
